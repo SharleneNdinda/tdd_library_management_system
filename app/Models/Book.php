@@ -9,4 +9,10 @@ class Book extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    // helper function for getting the path to a book
+    public function path()
+    {
+        return '/books/' . $this->id;
+    }
 }
